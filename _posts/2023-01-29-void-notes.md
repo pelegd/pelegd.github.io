@@ -1,3 +1,10 @@
+---
+title: Void Linux - current used distro
+date: 2023-01-29 14:00
+categories: [Linux,Void]
+tags: [linux,distro] #should always be lower case
+---
+
 # The Void (Linux) distribution
 
 Void is a general purpose operating system, based on the monolithic Linux kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.
@@ -34,4 +41,6 @@ Additionally, xbps-src can build natively or cross compile for the target machin
 ### [Documentations](https://docs.voidlinux.org/)
 ### [Manual Pages](https://man.voidlinux.org/)
 
-## Some Notes on the installation process
+## My Notes for installing void-linux
+
+
