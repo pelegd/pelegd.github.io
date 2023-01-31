@@ -1,7 +1,7 @@
 ---
-title: Void Linux - current used distro
+title: Void Linux - my current used distro
 date: 2023-01-31 08:00
-categories: [linux,void]
+categories: [Linux,Void]
 tags: [linux,distro] #should always be lower case
 ---
 
