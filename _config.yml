@@ -21,10 +21,10 @@ timezone: Asia/Jerusalem
 
 title: Peleg Daniel                          # the main title
 
-tagline: some stuff that interests me...   # it will display as the sub-title
+tagline: Yah, That's my site... working on it...   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Linux, Books Comics TV-shows and Movies
+  Tech, Books Comics TV-shows and Movies
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://pelegd.github.io'
@@ -39,14 +39,14 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Peleg Daniel
-  email: example@domain.com             # change to your email address
+  email: pelegdwww@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/pelegdaniel      # change to your twitter homepage
     - https://github.com/pelegd       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/peleg-daniel-06619933/
 
 google_site_verification:               # fill in to your verification string
 
