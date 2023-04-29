@@ -5,7 +5,7 @@ categories: [Linux,Void]
 tags: [linux,distro] #should always be lower case
 ---
 
-# The Void (Linux) distribution
+# The Void distribution
 
 Void is a general purpose operating system, based on the monolithic Linux kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.
 

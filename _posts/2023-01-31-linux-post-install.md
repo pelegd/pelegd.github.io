@@ -6,7 +6,7 @@ tags: [linux,apps,post-install] #should always be lower case
 ---
 
 # Linux Post-install
-These are the apps needed after a fresh install.
+These are the apps needed after a linux fresh install.
 
 ### CLI System Apps
 - neovim
@@ -53,4 +53,4 @@ These are the apps needed after a fresh install.
 - flameshot - screenshot editor
 - okular - pdf reader
 - zathura
-- 
+-
