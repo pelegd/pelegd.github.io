@@ -37,7 +37,7 @@ Get-Random | Get-Member # an example of a simple cmdlet with simple properties
 ```
 
 if not sure what cmdlet, just run a google search like "powershell get file properties" - you find for example Get-ItemProperty
-run get-help Get-ItemProperty to verife this is what you are looking for, and you can run it with the examples parameter... 
+run get-help Get-ItemProperty to verife this is what you are looking for, and you can run it with the examples parameter...
 ```powershell
 Find-Module -tag telegram # powershell has modules that can be installed to it
 ```

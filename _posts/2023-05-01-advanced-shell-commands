@@ -1,0 +1,101 @@
+---
+title: Advanced Shell Script Commands
+date: 2023-05-01 09:42
+categories: [shell,guide]
+tags: [guide,shell,connamds] #should always be lower case
+---
+Shell scripting is a powerful tool that can make your work easier and more efficient. If you’re a Linux user, you’re probably familiar with basic shell commands like `echo`, `cd`, and `ls`. However, there are more advanced commands that can take your shell scripting skills to the next level. In this article, we'll go over 10 advanced useful shell script commands and show you how to use them.
+
+### 1. awk
+The `awk` command is a powerful tool for manipulating text files. It processes data line by line and is particularly useful for extracting specific data from files. For example, you can extract the first column of data from a CSV file using the following command:
+
+```shell
+awk -F ',' '{print $1}' file.csv
+```
+
+In this command, the `-F` flag specifies that the delimiter is a comma. The curly braces `{}` are used to define an action to be taken on each line of the file. In this case, the action is to print the first field of each line, which is specified by `$1`. The file being processed is `file.csv`.
+
+### 2. sed
+The `sed` command is a useful tool for modifying files, particularly when it comes to finding and replacing text. For example, if you want to replace all occurrences of "old_text" with "new_text" in a file, you can use the following command:
+
+```shell
+sed -i 's/old_text/new_text/g' file.txt
+```
+
+In this example command, the `-i` flag is used to modify the file in place, meaning the changes will be made directly to the file instead of creating a new one. The argument `'s/old_text/new_text/g'` is a regular expression that specifies the replacement pattern. The `s` at the beginning stands for "substitute", and the `/g` at the end stands for "global", meaning it will replace all occurrences of `old_text` with `new_text` in the file. The `file.txt` argument specifies the file to be modified.
+
+### 3. find
+The `find` command is used to search for files and directories in a specified location. It is particularly useful for finding files based on specific criteria, such as file type or modified date. For example, if you want to find all files in the current directory modified within the last 24 hours, you can use the following command:
+
+```shell
+find . -type f -mtime -1
+```
+
+The `find` command is searching for files in the current directory that are of type `-type f` (files) and have been modified within the last 24 hours `-mtime -1`. The `-1` argument specifies the number of days ago (in this case, less than one day ago) that the file was modified. The result will be a list of files that meet these criteria.
+
+### 4. cut
+The `cut` command is used to extract specific columns or fields from a file. It is particularly useful for working with delimited files, such as CSV files. For example, if you want to extract the first and third columns of data from a CSV file, you can use the following command:
+
+```shell
+cut -d ',' -f 1,3 file.csv
+```
+
+In this command, `cut` extracts the first and third columns of data from a CSV file called `file.csv`. The `-d` flag specifies the delimiter used in the file, which in this case is a comma. The `-f` flag specifies which fields to extract, which in this case are the first and third fields. The result will be a list of values separated by commas, corresponding to the specified fields.
+
+### 5. xargs
+The `xargs` command executes commands with arguments taken from standard input. This is particularly useful when working with a large number of files or directories. For example, to delete all files with a .txt extension in the current directory, you can use the following command:
+
+```shell
+find . -name "*.txt" | xargs rm
+```
+
+In this example, `find . -name "*.txt"` finds all files in the current directory with a .txt extension. The `|` character pipes the output of the `find` command to the `xargs` command. The `rm` command deletes files. The `xargs` command takes the file names output by the `find` command and passes them as arguments to the `rm` command, resulting in all files with a .txt extension in the current directory being deleted.
+
+### 6. grep
+The `grep` command is used to search for a specific string in a file or set of files. It is particularly useful for finding files that contain a particular piece of information. For example, to find all files in the current directory that contain the string "example", you can use the following command:
+
+```shell
+grep -r "example" .
+```
+
+Here, the `-r` flag specifies that the search should be recursive, meaning it will search through all subdirectories. The `.` argument specifies the starting point for the search, which is the current directory.
+
+### 7. curl
+The `curl` command is a tool used to transfer data to or from a server. It is particularly useful for testing web services or downloading files from the internet. To download a file from a URL using `curl`, you can use the following command:
+
+```shell
+curl -O <https://example.com/file.txt>
+```
+
+The `curl -O <https://example.com/file.txt>` command downloads a file from the URL specified by `<https://example.com/file.txt>`. The `-O` flag is used to save the file with the same name as the remote file. If you want to save the file with a different name, you can use the `-o` flag followed by the desired name, like this: `curl -o local-filename.txt <https://example.com/file.txt>`.
+
+### 8. tee
+The `tee` command can redirect output to multiple files or processes. It is useful for logging output or creating backups of files. For example, to redirect output to both a file and the console, you can use the following command:
+
+```shell
+ls | tee file.txt
+```
+
+The `ls` command lists the files and directories in the current directory. The `|` character pipes the output of the `ls` command to the `tee` command. `tee` redirects the output of `ls` to both the console and a file called `file.txt`.
+
+To specify the delimiter used in the output, use the `-t` flag, followed by the desired delimiter. For example, `-t ,` sets the delimiter to a comma. The `-k` flag specifies which field to sort by. For example, `-k 2` sorts by the second field. The result is a sorted list of values, separated by the specified delimiter.
+
+### 9. wc
+The `wc` command is used to count the number of lines, words, and characters in a file or set of files. It is particularly useful for analyzing text data.
+
+For example, to count the number of lines in a file, use the following command:
+
+```shell
+wc -l file.txt
+```
+
+Here, `wc -l file.txt` counts the number of lines in a file named `file.txt`. The `-l` flag specifies that only the number of lines should be counted. The resulting number of lines will be output to the console.
+
+### 10. sort
+The `sort` command is a tool used to sort the contents of a file or set of files. This command is particularly useful for organizing data in a specific order. For example, if you need to sort a CSV file by the second column of data, you can use the following command:
+
+```shell
+sort -t ',' -k 2 file.csv
+```
+
+This command sorts a CSV file called `file.csv` by its second column of data. The `-t` flag specifies the delimiter used in the file, in this case a comma. The `-k` flag is used to specify which field to sort by, in this case the second field. The result will be a sorted list of values based on the second column of data.
